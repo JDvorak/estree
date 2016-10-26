@@ -3,8 +3,11 @@
 ## ImportExpression
 
 ```js
-interface ImportExpression <: Expression {
-    type: "ImportExpression";
-    source: Expression;
+interface Import <: Node {
+    type: "Import";
+}
+
+interface CallExpression <: Expression {
+  callee: Expression | Super | Import;
 }
 ```
